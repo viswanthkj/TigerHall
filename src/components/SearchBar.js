@@ -1,14 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {StyleSheet, Text, View, TextInput, Keyboard} from 'react-native';
 
-const SearchBar = ({query, handleSearch}) => {
+const SearchBar = ({query, handleSearch, disabled}) => {
   return (
     <View>
       <Text style={styles.labelSearch}>Search</Text>
       <TextInput
         value={query}
         onChangeText={handleSearch}
+        disbled={disabled}
         placeholder="Type any keyword"
         placeholderTextColor="#989898"
         style={{
